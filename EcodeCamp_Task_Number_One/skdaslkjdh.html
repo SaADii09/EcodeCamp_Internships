@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 5px;
+            resize: vertical;
+        }
+
+        .form-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 10px;
+            }
+
+            .form-input {
+                padding: 8px;
+            }
+
+            .form-button {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="https://formspree.io/f/mnnavlgy" method="POST">
+        <div class="form-group">
+            <label for="email" class="form-label">Your email:</label>
+            <input type="email" name="email" class="form-input" required>
+        </div>
+        <div class="form-group">
+            <label for="message" class="form-label">Your message:</label>
+            <textarea name="message" class="form-input" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="form-button">Send</button>
+    </form>
+</div>
+
+</body>
+</html>

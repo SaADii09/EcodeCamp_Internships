@@ -1,0 +1,64 @@
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-rounded {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded input boxes */
+    margin-top: 5px;
+    resize: vertical;
+}
+
+.textarea-rounded {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded textarea */
+    margin-top: 5px;
+    resize: vertical;
+}
+
+.button-rounded {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px; /* Rounded button */
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.button-rounded:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .input-rounded,
+    .textarea-rounded {
+        padding: 8px;
+    }
+
+    .button-rounded {
+        padding: 8px 16px;
+    }
+}
