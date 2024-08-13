@@ -1,35 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import {
+    Nav,
+    Footer,
+    Articles,
+    LatestNews,
+    FeaturedStories,
+    Search,
+} from "./components/index.js";
 
 function App() {
-    const [theme, setTheme] = useState(null);
-    useEffect(() => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
-    }, []);
-    useEffect(() => {
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    }, [theme]);
-
-    const handleThemeSwitch = () => {
-        setTheme(theme === "dark" ? "light" : "dark");
-    };
-
     return (
         <>
-            <div className="h-screen w-100 bg-white dark:bg-black flex justify-center items-center">
-                <button
-                    className="bg-green-200 p-4 rounded-3xl"
-                    onClick={handleThemeSwitch}>
-                    {theme === "dark" ? "Light Mode" : "Dark Mode"}
-                </button>
+            <Nav />
+            <div className="m-4 lg:grid gap-4 lg:grid-cols-12 hidden grid-cols-1">
+                <LatestNews />
+                <Articles />
+                <FeaturedStories />
+                <Search />
             </div>
+            <div className="m-4 grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:hidden">
+                <LatestNews />
+                <FeaturedStories /> 
+                <Articles />
+                <Search />
+            </div>
+            <Footer />
         </>
     );
 }
